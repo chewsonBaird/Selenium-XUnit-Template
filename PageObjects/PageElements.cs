@@ -29,9 +29,9 @@ namespace Investigation.PageObjects
         }
         public void GoTo()
         {
-            _driver.Navigate().GoToUrl("https://www.google.com");
+            _driver.Navigate().GoToUrl("https://uatbol.rwbaird.com/Login");
         }
 
-        public IWebElement SearchBar => WaitAndFindElement(By.XPath("//textarea[@id='APjFqb']"));
+        public IWebElement LoginButton => WaitAndFindElement(By.XPath("//input[@id='loginButton']"));
     }
 }

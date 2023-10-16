@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repositories\\Investigation\\Investigation.csproj": {}
+    "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj": {}
   },
   "projects": {
-    "C:\\repositories\\Investigation\\Investigation.csproj": {
+    "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repositories\\Investigation\\Investigation.csproj",
+        "projectUniqueName": "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj",
         "projectName": "Investigation",
-        "projectPath": "C:\\repositories\\Investigation\\Investigation.csproj",
-        "packagesPath": "C:\\Users\\empir\\.nuget\\packages\\",
-        "outputPath": "C:\\repositories\\Investigation\\obj\\",
+        "projectPath": "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj",
+        "packagesPath": "C:\\Users\\chewson\\.nuget\\packages\\",
+        "outputPath": "C:\\repositories\\Selenium-XUnit-Template\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\empir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chewson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://baird.jfrog.io/baird/api/nuget/v3/it-nuget-prd": {}
         },
         "frameworks": {
           "net6.0": {
@@ -40,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BrowserStack.TestAdapter": {
+              "target": "Package",
+              "version": "[0.3.1, )"
+            },
             "DotNetSeleniumExtras.WaitHelpers": {
               "target": "Package",
               "version": "[3.11.0, )"
@@ -85,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
