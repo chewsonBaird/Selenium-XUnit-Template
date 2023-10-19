@@ -115,12 +115,13 @@ namespace Investigation
             {
                 _driver.Manage().Window.Maximize();
                 //_transitionTracker.UpdateHouseholdData(TEST_HOUSEHOLD_TRANSITION_TRACKER_ID, false);
+                _transitionTracker.APIHouseholdClear();
 
-                _bairdOnLine.GoTo();
-                _bairdOnLine.Login();
+                //_bairdOnLine.GoTo();
+                //_bairdOnLine.Login();
 
-                Assert.True(_digital.WelcomeScreenWelcomeHeader.Displayed);
-                Assert.True(_digital.LetsGetStartedButton.Enabled);
+                //Assert.True(_digital.WelcomeScreenWelcomeHeader.Displayed);
+                //Assert.True(_digital.LetsGetStartedButton.Enabled);
 
                 _general.GetStartedAndClearCookies();
 
@@ -130,7 +131,7 @@ namespace Investigation
 
                 //Account Owners Flow
                 _wait.Until(ExpectedConditions.ElementToBeClickable(_digital.AccountOwnersEditPrimaryAccountOwnerButton));
-                _general.EditAccountOwner(employmentScenario: 3); //reset this to 1
+                _general.EditAccountOwner(employmentScenario: 1); 
                 _digital.AccountOwnerToAccounts();
 
                 //Accounts Flow

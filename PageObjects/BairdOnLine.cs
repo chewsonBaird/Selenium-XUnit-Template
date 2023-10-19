@@ -36,7 +36,7 @@ namespace SeleniumPOC.PageObjects
         // Methods
         public void GoTo()
         {
-            _driver.Navigate().GoToUrl("https://uatbol-blue.rwbaird.com/Login");
+            _driver.Navigate().GoToUrl("https://uatbol.rwbaird.com/Login");
             _wait.Until(ExpectedConditions.ElementToBeClickable(Username));
         }
         public void PROD__GoTo__PROD()

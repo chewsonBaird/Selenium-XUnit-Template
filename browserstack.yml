@@ -16,14 +16,14 @@ projectName: BrowserStack Suite
 # Set `buildName` as the name of the job / testsuite being run
 buildName: browserstack tests
 platforms:
-  #- os: Windows
-  #  osVersion: 10
-  #  browserName: Chrome
-  #  browserVersion: latest-beta
   - os: Windows
-    osVersion: 11
-    browserName: Firefox
+    osVersion: 10
+    browserName: Chrome
     browserVersion: latest-beta
+  #- os: Windows
+  #  osVersion: 11
+  #  browserName: Firefox
+  #  browserVersion: latest-beta
   #- os: Windows
   #  osVersion: 11
   #  browserName: Edge

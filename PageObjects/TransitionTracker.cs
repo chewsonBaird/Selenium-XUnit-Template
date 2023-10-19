@@ -14,6 +14,7 @@ namespace SeleniumPOC.PageObjects
         private IWebDriver _driver;
         private WebDriverWait _wait;
         private Actions _actions;
+        private readonly BairdOnLine _bairdOnLine;
 
         private string transitionsTrackerUrl = "https://uattransitionstracker.rwbaird.com/";
 
@@ -22,6 +23,7 @@ namespace SeleniumPOC.PageObjects
             _driver = driver;
             _wait = wait;
             _actions = actions;
+            _bairdOnLine = new BairdOnLine(_driver, _wait, _actions);
         }
 
         // Private Helpers
@@ -217,26 +219,59 @@ namespace SeleniumPOC.PageObjects
             _driver.SwitchTo().Window(_driver.WindowHandles.Last());
         }
 
+        public async void APIHouseholdClear()
+        {
+            _bairdOnLine.GoTo();
+            _bairdOnLine.Login();
+
+            var BOLAccessToken = _driver.Manage().Cookies.GetCookieNamed("BOLAccessToken");
+            var token = BOLAccessToken.Value;
+            await ResetHousehold(token);
+            Thread.Sleep(5000);
+            _driver.Navigate().Refresh();
+        }
+
         // ---- API Calls
 
-        static HttpClient client = new HttpClient();
+        public static HttpClient client = new HttpClient();
+        public static HttpContent content;
 
-        static async Task<HttpStatusCode> DeleteHouseholdAsync(string id)
+        public static async Task<HttpStatusCode> GetHouseholdStatusAsync()
         {
-            HttpResponseMessage response = await client.DeleteAsync(
-                $"v1/DigitalOnboardingHouseholds/{id}");
+            HttpResponseMessage response = await client.GetAsync(
+                $"/clienthousehold");
             return response.StatusCode;
         }
 
-        public static async Task ClearHousehold(string id)
+        public static async Task GetHouseholdStatus(string token)
         {
             client.BaseAddress = new Uri(UriString);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer my-token");
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
 
-            var statusCode = await DeleteHouseholdAsync(id);
+            var statusCode = await GetHouseholdStatusAsync();
+            Assert.Equal(HttpStatusCode.OK, statusCode);
+        }
+
+
+        public static async Task<HttpStatusCode> ResetHouseholdAsync()
+        {
+            HttpResponseMessage response = await client.PostAsync(
+                $"/clear-data", content);
+            return response.StatusCode;
+        }
+
+        public static async Task ResetHousehold(string token)
+        {
+            client.BaseAddress = new Uri(UriString);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+
+            var statusCode = await ResetHouseholdAsync();
             Assert.True(statusCode == HttpStatusCode.OK);
         }
     }
