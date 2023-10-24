@@ -47,7 +47,7 @@
           "dependencies": {
             "BrowserStack.TestAdapter": {
               "target": "Package",
-              "version": "[0.3.1, )"
+              "version": "[0.3.2, )"
             },
             "DotNetSeleniumExtras.WaitHelpers": {
               "target": "Package",
@@ -55,11 +55,11 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.7.1, )"
+              "version": "[17.7.2, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.11.0, )"
+              "version": "[4.14.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -69,13 +69,13 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.5.0, )"
+              "version": "[2.5.3, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.0, )"
+              "version": "[2.5.3, )"
             }
           },
           "imports": [

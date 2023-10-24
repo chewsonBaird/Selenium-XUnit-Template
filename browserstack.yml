@@ -14,7 +14,6 @@ accessKey: qBDq6Ngiuzemn8s5asWY
 # Set 'projectName' to the name of your project. Example, Marketing Website
 projectName: BrowserStack Suite
 # Set `buildName` as the name of the job / testsuite being run
-buildName: browserstack tests
 platforms:
   - os: Windows
     osVersion: 10

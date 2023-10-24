@@ -234,7 +234,7 @@ namespace SeleniumPOC.PageObjects
         // ---- API Calls
 
         public static HttpClient client = new HttpClient();
-        public static HttpContent content;
+        public static HttpContent? content;
 
         public static async Task<HttpStatusCode> GetHouseholdStatusAsync()
         {
