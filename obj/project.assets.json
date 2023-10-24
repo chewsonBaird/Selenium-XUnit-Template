@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "BrowserStack.TestAdapter/0.3.2": {
+      "BrowserStack.TestAdapter/0.3.3": {
         "type": "package",
         "dependencies": {
           "Lib.Harmony": "2.3.0-prerelease.2",
@@ -2251,16 +2251,16 @@
     }
   },
   "libraries": {
-    "BrowserStack.TestAdapter/0.3.2": {
-      "sha512": "LULw8oMb/GXYMBEcvfBjGtF2nU3M9DRpfR7ToVVYt3H1fLQaHxoF001cpVbrV+NjxRU6NPFS8iEuQ3Y+tLZMBg==",
+    "BrowserStack.TestAdapter/0.3.3": {
+      "sha512": "Ypb/ouFY3YD7pAyx9TRz78yNE9sxrf3C84x0MBEBg0pMatBzabUDYhWEnTt5vjFQt02YDKAF3CEtkQnMkBC2Dw==",
       "type": "package",
-      "path": "browserstack.testadapter/0.3.2",
+      "path": "browserstack.testadapter/0.3.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
-        "browserstack.testadapter.0.3.2.nupkg.sha512",
+        "browserstack.testadapter.0.3.3.nupkg.sha512",
         "browserstack.testadapter.nuspec",
         "build/BrowserStack.TestAdapter.targets",
         "lib/netcoreapp3.1/00BrowserStack.TestAdapter.dll",
@@ -7404,7 +7404,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "BrowserStack.TestAdapter >= 0.3.2",
+      "BrowserStack.TestAdapter >= 0.3.3",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "Microsoft.NET.Test.Sdk >= 17.7.2",
       "Selenium.WebDriver >= 4.14.1",
@@ -7460,7 +7460,7 @@
         "dependencies": {
           "BrowserStack.TestAdapter": {
             "target": "Package",
-            "version": "[0.3.2, )"
+            "version": "[0.3.3, )"
           },
           "DotNetSeleniumExtras.WaitHelpers": {
             "target": "Package",

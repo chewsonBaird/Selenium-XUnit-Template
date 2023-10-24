@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "01459qPCl7+zFIuyHakc+IJJgACEgpzMgAsXHBJn0nVHCP93MKGe+NUZFFsQlFEHtWkbtIBAaP0NWfSntIbyig==",
+  "dgSpecHash": "h9P7qWXp6BocLpDLkeYxDsndb+EuI/GpRbzm3z0BPsdJZNzYer/IHI9N7uOpkdN9uYb6lW6rFMiSvj169ZJAnQ==",
   "success": true,
   "projectFilePath": "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\chewson\\.nuget\\packages\\browserstack.testadapter\\0.3.2\\browserstack.testadapter.0.3.2.nupkg.sha512",
+    "C:\\Users\\chewson\\.nuget\\packages\\browserstack.testadapter\\0.3.3\\browserstack.testadapter.0.3.3.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\lib.harmony\\2.3.0-prerelease.2\\lib.harmony.2.3.0-prerelease.2.nupkg.sha512",

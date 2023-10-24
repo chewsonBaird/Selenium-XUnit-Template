@@ -8,6 +8,8 @@ using Investigation.PageObjects;
 using SeleniumPOC.PageObjects;
 using SeleniumExtras.WaitHelpers;
 using TestObservability.Model.CBT;
+using OpenQA.Selenium.Remote;
+using TestObservability.Helper.CBT;
 
 namespace Investigation
 {
@@ -26,12 +28,29 @@ namespace Investigation
 
         public UnitTest1()
         {
-            ChromeOptions options = new ChromeOptions();
-            //options.AddArguments("headless");
-            options.AddArguments("--start-maximized");
-            options.AddAdditionalOption("acceptInsecureCerts", true);
-            //options.AddArguments("--incognito");
-            _driver = new ChromeDriver(options);
+            //ChromeOptions options = new ChromeOptions();
+            ////options.AddArguments("headless");
+            //options.AddArguments("--start-maximized");
+            //options.AddAdditionalOption("acceptInsecureCerts", true);
+            ////options.AddArguments("--incognito");
+            //_driver = new ChromeDriver(options);
+
+            ChromeOptions capabilities = new ChromeOptions();
+            capabilities.BrowserVersion = "latest"; // Use latest-beta, latest, latest-1 and so on
+            Dictionary<string, object> browserstackOptions = new Dictionary<string, object>();
+            browserstackOptions.Add("os", "Windows");
+            browserstackOptions.Add("osVersion", "10");
+            browserstackOptions.Add("sessionName", "BStack Build Name: " + "browserstack-pipe"); 
+            browserstackOptions.Add("userName", "jimwarchol_Z1kK3g");
+            browserstackOptions.Add("accessKey", "qBDq6Ngiuzemn8s5asWY");
+            browserstackOptions.Add("seleniumVersion", "4.14.1");
+            browserstackOptions.Add("acceptInsecureCerts", true);
+            browserstackOptions.Add("local", false);
+            //browserstackOptions.Add("localIdentifier", localIdentifier);
+            capabilities.AddAdditionalOption("bstack:options", browserstackOptions);
+
+            _driver = new RemoteWebDriver(new Uri("https://hub.browserstack.com/wd/hub/"), capabilities);
+
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(WAIT_FOR_ELEMENT_TIMEOUT));
             _actions = new Actions(_driver);
             _pageObject = new PageElements(_driver,_wait,_actions);
@@ -109,13 +128,13 @@ namespace Investigation
         // Test Case Id: 96368
         //Single account owner, individual account
         [Fact]
-        public void CLIENT_IndividualAccount()
+        public async void CLIENT_IndividualAccount()
         {
             try
             {
                 _driver.Manage().Window.Maximize();
                 //_transitionTracker.UpdateHouseholdData(TEST_HOUSEHOLD_TRANSITION_TRACKER_ID, false);
-                _transitionTracker.APIHouseholdClear();
+                var token = await _transitionTracker.APIHouseholdClear();
 
                 //_bairdOnLine.GoTo();
                 //_bairdOnLine.Login();

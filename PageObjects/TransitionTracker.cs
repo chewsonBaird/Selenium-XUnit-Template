@@ -5,6 +5,7 @@ using SeleniumExtras.WaitHelpers;
 using System.Net.Http.Headers;
 using System.Net;
 using Xunit;
+using Newtonsoft.Json;
 
 namespace SeleniumPOC.PageObjects
 {
@@ -219,60 +220,66 @@ namespace SeleniumPOC.PageObjects
             _driver.SwitchTo().Window(_driver.WindowHandles.Last());
         }
 
-        public async void APIHouseholdClear()
+        public async Task<string> APIHouseholdClear()
         {
             _bairdOnLine.GoTo();
             _bairdOnLine.Login();
 
             var BOLAccessToken = _driver.Manage().Cookies.GetCookieNamed("BOLAccessToken");
             var token = BOLAccessToken.Value;
-            await ResetHousehold(token);
+            await ResetHouse(token);
             Thread.Sleep(5000);
             _driver.Navigate().Refresh();
+            return token;
         }
 
         // ---- API Calls
 
-        public static HttpClient client = new HttpClient();
         public static HttpContent? content;
-
-        public static async Task<HttpStatusCode> GetHouseholdStatusAsync()
+        public static object loginContent = new
         {
-            HttpResponseMessage response = await client.GetAsync(
+            userId = "chewson",
+            password = "Testing123"
+        };
+
+
+        public static async Task<dynamic> GetHousehold(string token)
+        {
+            string result = string.Empty;
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(UriString);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+
+                var household = await client.GetAsync(
                 $"/clienthousehold");
-            return response.StatusCode;
+                if (household.IsSuccessStatusCode)
+                {
+                    result = await household.Content.ReadAsStringAsync();
+                }
+            }
+            return JsonConvert.DeserializeObject<dynamic>(result);
         }
 
-        public static async Task GetHouseholdStatus(string token)
+        public static async Task ResetHouse(string token)
         {
-            client.BaseAddress = new Uri(UriString);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            string result = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(UriString);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
 
-            var statusCode = await GetHouseholdStatusAsync();
-            Assert.Equal(HttpStatusCode.OK, statusCode);
-        }
-
-
-        public static async Task<HttpStatusCode> ResetHouseholdAsync()
-        {
-            HttpResponseMessage response = await client.PostAsync(
-                $"/clear-data", content);
-            return response.StatusCode;
-        }
-
-        public static async Task ResetHousehold(string token)
-        {
-            client.BaseAddress = new Uri(UriString);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-            var statusCode = await ResetHouseholdAsync();
-            Assert.True(statusCode == HttpStatusCode.OK);
+                var household = await client.PostAsync(
+                $"/clear-data", null);
+                Assert.Equal(HttpStatusCode.OK, household.StatusCode);
+            }
         }
     }
 }

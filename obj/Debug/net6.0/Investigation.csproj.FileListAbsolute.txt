@@ -237,7 +237,6 @@ C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Mono.Cecil.Mdb.dll
 C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Mono.Cecil.Pdb.dll
 C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Mono.Cecil.Rocks.dll
 C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Mono.Cecil.dll
-C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\MonoMod.Common.dll
 C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\NLog.dll
 C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\NuGet.Frameworks.dll
@@ -355,3 +354,12 @@ C:\repositories\Selenium-XUnit-Template\obj\Debug\net6.0\refint\Investigation.dl
 C:\repositories\Selenium-XUnit-Template\obj\Debug\net6.0\Investigation.pdb
 C:\repositories\Selenium-XUnit-Template\obj\Debug\net6.0\Investigation.genruntimeconfig.cache
 C:\repositories\Selenium-XUnit-Template\obj\Debug\net6.0\ref\Investigation.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\MonoMod.Backports.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\MonoMod.Core.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\MonoMod.Iced.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\MonoMod.ILHelpers.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\MonoMod.Utils.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
