@@ -21,6 +21,13 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: '<connection_name>'
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate'
+
 - task: VSBuild@1
   displayName: 'Build solution'
   inputs:
@@ -32,7 +39,7 @@ steps:
   displayName: 'Run Tests'
   inputs:
     testAssemblyVer2: |
-      **\$(BuildConfiguration)\**\SeleniumPOC.dll
+      **\$(BuildConfiguration)\**\Investigation.dll
       !**\*TestAdapter.dll
       !**\obj\**
     platform: '$(buildPlatform)'
