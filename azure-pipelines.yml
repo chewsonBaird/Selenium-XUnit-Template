@@ -23,9 +23,7 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
-- task: BrowserStackResults@1
-  inputs:
-    browserstackProduct: 'automate'
+
 - task: VSBuild@1
   displayName: 'Build solution'
   inputs:
@@ -42,3 +40,6 @@ steps:
       !**\obj\**
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate'
