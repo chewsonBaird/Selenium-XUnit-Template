@@ -31,16 +31,23 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  displayName: 'Run Tests'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\$(BuildConfiguration)\**\Investigation.dll
-      !**\obj\**
+#- task: VSTest@2
+#  displayName: 'Run Tests'
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\$(BuildConfiguration)\**\Investigation.dll
+#      !**\obj\**
 #     !**\*TestAdapter.dll
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: Run Visual studio tests
+  inputs:
+    command: test
+    projects: '**/Investigation.csproj'
+    arguments: '--configuration debug'
 - task: BrowserStackResults@1
   inputs:
     browserstackProduct: 'automate'
