@@ -59,11 +59,15 @@ steps:
   inputs:
     command: 'build'
     projects: '**/Investigation.csproj'
+    arguments: '--solution $(solution)'
+    arguments: '--platform $(buildPlatform)'
     arguments: '--configuration $(buildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
     projects: '**/Investigation.csproj'
+    arguments: '--solution $(solution)'
+    arguments: '--platform $(buildPlatform)'
     arguments: '--configuration $(buildConfiguration)'
 - task: BrowserStackResults@1
   inputs:
