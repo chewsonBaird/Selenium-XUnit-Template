@@ -52,6 +52,9 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     rerunFailedTests: true
     rerunFailedThreshold: '50'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    testFiltercriteria: FullyQualifiedName~UnitTest1
 
 - task: BrowserStackResults@1
   inputs:
