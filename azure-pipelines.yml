@@ -44,7 +44,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '**\$(BuildConfiguration)\**\Investigation.csproj'
+    projects: '**\Investigation.csproj'
 - task: BrowserStackResults@1
   inputs:
     browserstackProduct: 'automate'
