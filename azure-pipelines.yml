@@ -36,8 +36,8 @@ steps:
   inputs:
     testAssemblyVer2: |
       **\$(BuildConfiguration)\**\Investigation.dll
-      !**\*TestAdapter.dll
       !**\obj\**
+#      !**\*TestAdapter.dll
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 - task: BrowserStackResults@1
