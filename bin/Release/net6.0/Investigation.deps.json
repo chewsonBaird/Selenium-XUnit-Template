@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Investigation/1.0.0": {
         "dependencies": {
-          "BrowserStack.TestAdapter": "0.3.3",
+          "BrowserStack.TestAdapter": "0.3.4",
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Microsoft.NET.Test.Sdk": "17.7.2",
           "Selenium.WebDriver": "4.14.1",
@@ -20,7 +20,7 @@
           "Investigation.dll": {}
         }
       },
-      "BrowserStack.TestAdapter/0.3.3": {
+      "BrowserStack.TestAdapter/0.3.4": {
         "dependencies": {
           "Lib.Harmony": "2.3.0-prerelease.2",
           "Microsoft.CodeAnalysis.CSharp": "4.7.0",
@@ -32,16 +32,16 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/00BrowserStack.TestAdapter.dll": {
-            "assemblyVersion": "0.3.3.0",
-            "fileVersion": "0.3.3.0"
+            "assemblyVersion": "0.3.4.0",
+            "fileVersion": "0.3.4.0"
           },
           "lib/netcoreapp3.1/BrowserStackSDK.dll": {
-            "assemblyVersion": "0.3.3.0",
-            "fileVersion": "0.3.3.0"
+            "assemblyVersion": "0.3.4.0",
+            "fileVersion": "0.3.4.0"
           },
           "lib/netcoreapp3.1/BrowserstackListener.dll": {
-            "assemblyVersion": "0.3.3.0",
-            "fileVersion": "0.3.3.0"
+            "assemblyVersion": "0.3.4.0",
+            "fileVersion": "0.3.4.0"
           }
         }
       },
@@ -1422,12 +1422,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BrowserStack.TestAdapter/0.3.3": {
+    "BrowserStack.TestAdapter/0.3.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ypb/ouFY3YD7pAyx9TRz78yNE9sxrf3C84x0MBEBg0pMatBzabUDYhWEnTt5vjFQt02YDKAF3CEtkQnMkBC2Dw==",
-      "path": "browserstack.testadapter/0.3.3",
-      "hashPath": "browserstack.testadapter.0.3.3.nupkg.sha512"
+      "sha512": "sha512-lnXCaecBAR/Ogo4a0ULmaknbvmdoPfHegE0jdlP77GLYEx69oXSmxv4dXojF7VMa4ZgPwrUn52lrBZ0fC6dRtQ==",
+      "path": "browserstack.testadapter/0.3.4",
+      "hashPath": "browserstack.testadapter.0.3.4.nupkg.sha512"
     },
     "coverlet.collector/6.0.0": {
       "type": "package",

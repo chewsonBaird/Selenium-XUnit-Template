@@ -17,7 +17,7 @@ namespace Investigation
     public class UnitTest1
     {
         private readonly IWebDriver _driver;
-        private const int WAIT_FOR_ELEMENT_TIMEOUT = 30;
+        private const int WAIT_FOR_ELEMENT_TIMEOUT = 25;
         private readonly WebDriverWait _wait;
         private readonly Actions _actions;
         private readonly PageElements _pageObject;
@@ -180,6 +180,10 @@ namespace Investigation
                 _general.SubmitWithoutStatements();
 
                 Assert.True(_digital.SubmitCompleted.Displayed);
+            }
+            catch
+            {
+                Assert.Fail();
             }
             finally
             {
