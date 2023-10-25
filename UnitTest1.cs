@@ -29,29 +29,29 @@ namespace Investigation
 
         public UnitTest1()
         {
-            ChromeOptions options = new ChromeOptions();
-            //options.AddArguments("headless");
-            options.AddArguments("--start-maximized");
-            options.AddAdditionalOption("acceptInsecureCerts", true);
-            //options.AddArguments("--incognito");
-            _driver = new ChromeDriver(options);
+            //ChromeOptions options = new ChromeOptions();
+            ////options.AddArguments("headless");
+            //options.AddArguments("--start-maximized");
+            //options.AddAdditionalOption("acceptInsecureCerts", true);
+            ////options.AddArguments("--incognito");
+            //_driver = new ChromeDriver(options);
 
-            //ChromeOptions capabilities = new ChromeOptions();
-            //capabilities.BrowserVersion = "latest"; // Use latest-beta, latest, latest-1 and so on
-            //Dictionary<string, object> browserstackOptions = new Dictionary<string, object>();
-            //browserstackOptions.Add("os", "Windows");
-            //browserstackOptions.Add("osVersion", "10");
-            //browserstackOptions.Add("sessionName", "BStack Build Name: " + "browserstack-pipe");
-            //browserstackOptions.Add("userName", "jimwarchol_Z1kK3g");
-            //browserstackOptions.Add("accessKey", "qBDq6Ngiuzemn8s5asWY");
-            //browserstackOptions.Add("seleniumVersion", "4.14.1");
-            ////browserstackOptions.Add("acceptInsecureCerts", true);
-            //browserstackOptions.Add("local", false);
-            ////browserstackOptions.Add("localIdentifier", localIdentifier);
-            //capabilities.AddUserProfilePreference("autofill.profile_enabled", false);
-            //capabilities.AddAdditionalOption("bstack:options", browserstackOptions);
+            ChromeOptions capabilities = new ChromeOptions();
+            capabilities.BrowserVersion = "latest"; // Use latest-beta, latest, latest-1 and so on
+            Dictionary<string, object> browserstackOptions = new Dictionary<string, object>();
+            browserstackOptions.Add("os", "Windows");
+            browserstackOptions.Add("osVersion", "10");
+            browserstackOptions.Add("sessionName", "BStack Build Name: " + "browserstack-pipe");
+            browserstackOptions.Add("userName", "jimwarchol_Z1kK3g");
+            browserstackOptions.Add("accessKey", "qBDq6Ngiuzemn8s5asWY");
+            browserstackOptions.Add("seleniumVersion", "4.14.1");
+            //browserstackOptions.Add("acceptInsecureCerts", true);
+            browserstackOptions.Add("local", false);
+            //browserstackOptions.Add("localIdentifier", localIdentifier);
+            capabilities.AddUserProfilePreference("autofill.profile_enabled", false);
+            capabilities.AddAdditionalOption("bstack:options", browserstackOptions);
 
-            //_driver = new RemoteWebDriver(new Uri("https://hub.browserstack.com/wd/hub/"), capabilities);
+            _driver = new RemoteWebDriver(new Uri("https://hub.browserstack.com/wd/hub/"), capabilities);
 
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(WAIT_FOR_ELEMENT_TIMEOUT));
             _actions = new Actions(_driver);
