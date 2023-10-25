@@ -9343,3 +9343,323 @@ C:\repositories\Selenium-XUnit-Template>echo "completed bat file"
 
 2023-10-24 15:26:14.9550|INFO|A.b|Cleaning up adapter
 2023-10-24 15:26:14.9550|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-24 16:14:26.6985|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-24 16:14:26.6985|INFO|A.b|Setting up adapter
+2023-10-24 16:14:26.7180|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-24 16:14:49.7576|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-24 16:14:49.7576|INFO|A.b|0 : 
+2023-10-24 16:14:28.6459|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-24 16:14:28.8240|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-24 16:14:49.0995|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.UnitTest1.CLIENT_IndividualAccount [16 s]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: OK
+Actual:   Unauthorized
+  Stack Trace:
+     at SeleniumPOC.PageObjects.TransitionTracker.ResetHouse(String token) in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 281
+   at SeleniumPOC.PageObjects.TransitionTracker.APIHouseholdClear() in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 230
+   at Investigation.UnitTest1.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\UnitTest1.cs:line 137
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-24 16:14:49.3868|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/b11efb5fac2cec7b8d9e2947fe499748e5145a66
+
+[xUnit.net 00:00:16.51]     Investigation.UnitTest1.CLIENT_IndividualAccount [FAIL]
+
+2023-10-24 16:14:49.7583|INFO|A.b|Cleaning up adapter
+2023-10-24 16:14:49.7583|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-24 16:15:56.6171|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-24 16:15:56.6280|INFO|A.b|Setting up adapter
+2023-10-24 16:15:56.6351|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-24 16:22:09.7837|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-24 16:22:09.7837|INFO|A.b|0 : 
+2023-10-24 16:15:58.9070|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-24 16:15:59.1919|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-24 16:22:08.9212|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-24 16:22:09.3130|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/4038b623c992a608346c8292f7a8dc4012fac087
+
+
+2023-10-24 16:22:09.7837|INFO|A.b|Cleaning up adapter
+2023-10-24 16:22:09.7837|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-25 08:42:06.3113|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 08:42:06.3286|INFO|A.b|Setting up adapter
+2023-10-25 08:42:06.3286|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 08:42:06.3443|INFO|A.b|Debugger is attached, setting VSTEST_HOST_DEBUG
+2023-10-25 08:46:10.8847|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 08:46:10.9024|INFO|A.b|Setting up adapter
+2023-10-25 08:46:10.9024|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 08:46:10.9181|INFO|A.b|Debugger is attached, setting VSTEST_HOST_DEBUG
+2023-10-25 08:48:45.6728|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 08:48:45.6849|INFO|A.b|Setting up adapter
+2023-10-25 08:48:45.6849|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 08:49:14.0898|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-25 08:49:14.0898|INFO|A.b|0 : 
+2023-10-25 08:48:48.0123|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-25 08:48:48.1919|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-25 08:49:13.4426|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.UnitTest1.CLIENT_IndividualAccount [21 s]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: OK
+Actual:   Unauthorized
+  Stack Trace:
+     at SeleniumPOC.PageObjects.TransitionTracker.ResetHouse(String token) in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 281
+   at SeleniumPOC.PageObjects.TransitionTracker.APIHouseholdClear() in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 230
+   at Investigation.UnitTest1.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\UnitTest1.cs:line 137
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-25 08:49:13.7797|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/0547675350e3843a491fe6ddfe26426c76a7f401
+
+[xUnit.net 00:00:21.65]     Investigation.UnitTest1.CLIENT_IndividualAccount [FAIL]
+
+2023-10-25 08:49:14.0898|INFO|A.b|Cleaning up adapter
+2023-10-25 08:49:14.2080|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-25 08:49:52.8405|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 08:49:52.8405|INFO|A.b|Setting up adapter
+2023-10-25 08:49:52.8604|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 08:50:29.0721|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-25 08:50:29.0721|INFO|A.b|0 : 
+2023-10-25 08:49:54.9186|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-25 08:49:55.0924|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-25 08:50:28.4256|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.UnitTest1.CLIENT_IndividualAccount [29 s]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: OK
+Actual:   Unauthorized
+  Stack Trace:
+     at SeleniumPOC.PageObjects.TransitionTracker.ResetHouse(String token) in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 281
+   at SeleniumPOC.PageObjects.TransitionTracker.APIHouseholdClear() in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 230
+   at Investigation.UnitTest1.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\UnitTest1.cs:line 137
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-25 08:50:28.7358|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/7c85835d451ac6169876aadf3caab3399a1d163d
+
+[xUnit.net 00:00:29.84]     Investigation.UnitTest1.CLIENT_IndividualAccount [FAIL]
+
+2023-10-25 08:50:29.0721|INFO|A.b|Cleaning up adapter
+2023-10-25 08:50:29.0750|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-25 08:52:04.4335|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 08:52:04.4335|INFO|A.b|Setting up adapter
+2023-10-25 08:52:04.4533|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 08:52:31.8477|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-25 08:52:31.8477|INFO|A.b|0 : 
+2023-10-25 08:52:06.3459|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-25 08:52:06.5329|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-25 08:52:31.0617|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.UnitTest1.CLIENT_IndividualAccount [20 s]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: OK
+Actual:   Unauthorized
+  Stack Trace:
+     at SeleniumPOC.PageObjects.TransitionTracker.ResetHouse(String token) in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 284
+   at SeleniumPOC.PageObjects.TransitionTracker.APIHouseholdClear() in C:\repositories\Selenium-XUnit-Template\PageObjects\TransitionTracker.cs:line 234
+   at Investigation.UnitTest1.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\UnitTest1.cs:line 137
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-25 08:52:31.5474|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/695c9a5cbf32acecab17d205dda4a89ea3f38c40
+
+[xUnit.net 00:00:20.68]     Investigation.UnitTest1.CLIENT_IndividualAccount [FAIL]
+
+2023-10-25 08:52:31.8477|INFO|A.b|Cleaning up adapter
+2023-10-25 08:52:31.8477|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-25 08:56:56.3824|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 08:56:56.3947|INFO|A.b|Setting up adapter
+2023-10-25 08:56:56.4026|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 08:59:04.8551|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-25 08:59:04.8554|INFO|A.b|0 : 
+2023-10-25 08:57:00.2479|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-25 08:57:01.4128|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-25 08:59:03.9033|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.UnitTest1.CLIENT_IndividualAccount [1 m 58 s]
+  Error Message:
+   OpenQA.Selenium.WebDriverTimeoutException : Timed out after 30 seconds
+---- OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/account-owners/1/name']"}
+  (Session info: chrome=119.0.6045.9); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+  Stack Trace:
+     at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at SeleniumPOC.PageObjects.DigitalOnboarding.WaitAndFindElement(By locator) in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 312
+   at SeleniumPOC.PageObjects.DigitalOnboarding.get_AccountOwnersEditPrimaryAccountOwnerButton() in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 118
+   at Investigation.UnitTest1.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\UnitTest1.cs:line 152
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+----- Inner Stack Trace -----
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-25 08:59:04.2378|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/b9f67aa7f8f87da1378ced79bf30306fe6a38ded
+
+[xUnit.net 00:01:58.50]     Investigation.UnitTest1.CLIENT_IndividualAccount [FAIL]
+
+2023-10-25 08:59:04.8554|INFO|A.b|Cleaning up adapter
+2023-10-25 08:59:04.8554|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-25 09:19:16.9798|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-25 09:19:16.9912|INFO|A.b|Setting up adapter
+2023-10-25 09:19:16.9912|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)""
+2023-10-25 09:22:01.3443|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\Investigation.dll"
+2023-10-25 09:22:01.3443|INFO|A.b|0 : 
+2023-10-25 09:19:19.4614|INFO|browserstack_sdk.Program|Detected Selenium version 4.14.1
+2023-10-25 09:19:19.7133|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-25 09:22:00.5118|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.UnitTest1.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.UnitTest1.CLIENT_IndividualAccount [2 m 36 s]
+  Error Message:
+   OpenQA.Selenium.WebDriverTimeoutException : Timed out after 30 seconds
+---- OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/account-owners/1/name']"}
+  (Session info: chrome=119.0.6045.9); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+  Stack Trace:
+     at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at SeleniumPOC.PageObjects.DigitalOnboarding.get_AccountOwnersEditPrimaryAccountOwnerButton() in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 118
+   at Investigation.UnitTest1.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\UnitTest1.cs:line 154
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+----- Inner Stack Trace -----
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-25 09:22:01.0424|INFO|browserstack_sdk.utils|View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/d0d4024e96852f9065eed93bf1c6677bbfa3ed76
+
+[xUnit.net 00:02:36.97]     Investigation.UnitTest1.CLIENT_IndividualAccount [FAIL]
+
+2023-10-25 09:22:01.3443|INFO|A.b|Cleaning up adapter
+2023-10-25 09:22:01.3443|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack

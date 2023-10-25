@@ -10,6 +10,7 @@ using SeleniumExtras.WaitHelpers;
 using TestObservability.Model.CBT;
 using OpenQA.Selenium.Remote;
 using TestObservability.Helper.CBT;
+using Microsoft.CodeAnalysis;
 
 namespace Investigation
 {
@@ -40,13 +41,14 @@ namespace Investigation
             Dictionary<string, object> browserstackOptions = new Dictionary<string, object>();
             browserstackOptions.Add("os", "Windows");
             browserstackOptions.Add("osVersion", "10");
-            browserstackOptions.Add("sessionName", "BStack Build Name: " + "browserstack-pipe"); 
+            browserstackOptions.Add("sessionName", "BStack Build Name: " + "browserstack-pipe");
             browserstackOptions.Add("userName", "jimwarchol_Z1kK3g");
             browserstackOptions.Add("accessKey", "qBDq6Ngiuzemn8s5asWY");
             browserstackOptions.Add("seleniumVersion", "4.14.1");
-            browserstackOptions.Add("acceptInsecureCerts", true);
+            //browserstackOptions.Add("acceptInsecureCerts", true);
             browserstackOptions.Add("local", false);
             //browserstackOptions.Add("localIdentifier", localIdentifier);
+            capabilities.AddUserProfilePreference("autofill.profile_enabled", false);
             capabilities.AddAdditionalOption("bstack:options", browserstackOptions);
 
             _driver = new RemoteWebDriver(new Uri("https://hub.browserstack.com/wd/hub/"), capabilities);

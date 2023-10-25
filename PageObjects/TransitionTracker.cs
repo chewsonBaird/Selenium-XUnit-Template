@@ -11,7 +11,7 @@ namespace SeleniumPOC.PageObjects
 {
     public class TransitionTracker
     {
-        private const string UriString = "https://uatdigocore.rwbaird.com/";
+        private const string UriString = "https://baird-digitalonboardingapi-uat.azurewebsites.net/";
         private IWebDriver _driver;
         private WebDriverWait _wait;
         private Actions _actions;
@@ -227,6 +227,10 @@ namespace SeleniumPOC.PageObjects
 
             var BOLAccessToken = _driver.Manage().Cookies.GetCookieNamed("BOLAccessToken");
             var token = BOLAccessToken.Value;
+            if(token == null)
+            {
+                Assert.Fail();
+            }
             await ResetHouse(token);
             Thread.Sleep(5000);
             _driver.Navigate().Refresh();
@@ -267,7 +271,6 @@ namespace SeleniumPOC.PageObjects
 
         public static async Task ResetHouse(string token)
         {
-            string result = string.Empty;
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(UriString);

@@ -37,3 +37,5 @@ platforms:
   #  browserName: Safari
   #  browserVersion: 14.1
 browserstackLocal: false
+debug: true
+networkLogs: true
