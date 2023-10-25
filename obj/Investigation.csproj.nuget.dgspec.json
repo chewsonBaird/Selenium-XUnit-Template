@@ -47,7 +47,7 @@
           "dependencies": {
             "BrowserStack.TestAdapter": {
               "target": "Package",
-              "version": "[0.3.3, )"
+              "version": "[0.3.4, )"
             },
             "DotNetSeleniumExtras.WaitHelpers": {
               "target": "Package",

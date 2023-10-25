@@ -12,9 +12,9 @@ accessKey: qBDq6Ngiuzemn8s5asWY
 # ======================
 # The following capabilities are used to set up reporting on BrowserStack:
 # Set 'projectName' to the name of your project. Example, Marketing Website
-projectName: BrowserStack Suite
+#projectName: BrowserStack Suite
 # Set `buildName` as the name of the job / testsuite being run
-buildName: browserstack-pipe
+#buildName: browserstack-pipe
 platforms:
   - os: Windows
     osVersion: 10
