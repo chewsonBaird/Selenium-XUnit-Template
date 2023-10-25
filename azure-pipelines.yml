@@ -35,7 +35,7 @@ steps:
   displayName: 'Run Tests'
   inputs:
     testAssemblyVer2: |
-      **\$(BuildConfiguration)\**\Investigation.dll
+      **\$(BuildConfiguration)\**\Investigation.csproj
       !**\*TestAdapter.dll
       !**\obj\**
     platform: '$(buildPlatform)'
