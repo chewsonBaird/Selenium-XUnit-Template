@@ -41,10 +41,18 @@ steps:
 #      !**\*TestAdapter.dll
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
-- task: DotNetCoreCLI@2
+
+- task: VSTest@3
   inputs:
-    command: 'test'
-    projects: '**\Investigation.csproj'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\Investigation.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    rerunFailedTests: true
+    rerunFailedThreshold: '50'
+
 - task: BrowserStackResults@1
   inputs:
     browserstackProduct: 'automate'
