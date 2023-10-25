@@ -36,7 +36,7 @@ steps:
   inputs:
     testAssemblyVer2: |
       **\$(BuildConfiguration)\**\Investigation.dll
-#      !**\obj\**
+      !**\obj\**
 #      !**\*TestAdapter.dll
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
