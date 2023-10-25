@@ -38,14 +38,12 @@ steps:
 #    testAssemblyVer2: |
 #      **\$(BuildConfiguration)\**\Investigation.dll
 #      !**\obj\**
-#     !**\*TestAdapter.dll
+#      !**\*TestAdapter.dll
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
-
 - task: DotNetCoreCLI@2
-  displayName: Run Visual studio tests
   inputs:
-    command: test
+    command: 'test'
     projects: '**\$(BuildConfiguration)\**\Investigation.csproj'
 - task: BrowserStackResults@1
   inputs:
