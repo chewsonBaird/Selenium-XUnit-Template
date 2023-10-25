@@ -24,12 +24,12 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
 
-#- task: VSBuild@1
-#  displayName: 'Build solution'
-#  inputs:
-#    solution: '$(solution)'
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
+- task: VSBuild@1
+  displayName: 'Build solution'
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 #- task: VSTest@2
 #  displayName: 'Run Tests'
@@ -42,29 +42,20 @@ steps:
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
 
-#- task: VSTest@3
-#  inputs:
-#    testSelector: 'testAssemblies'
-#    testAssemblyVer2: |
-#      **\$(BuildConfiguration)\**\Investigation.dll
-#      !**\*TestAdapter.dll
-#      !**\obj\**
-#    searchFolder: '$(System.DefaultWorkingDirectory)'
-#    rerunFailedTests: true
-#    rerunFailedThreshold: '50'
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
-#    testFiltercriteria: FullyQualifiedName~UnitTest1
-- task: DotNetCoreCLI@2
+- task: VSTest@3
   inputs:
-    command: 'build'
-    projects: '**\$(BuildConfiguration)\**\Investigation'
-    arguments: '--configuration $(buildConfiguration)'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: '**\$(BuildConfiguration)\**\Investigation.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\$(BuildConfiguration)\**\Investigation.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    rerunFailedTests: true
+    rerunFailedThreshold: '50'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    testFiltercriteria: FullyQualifiedName~UnitTest1
+
 - task: BrowserStackResults@1
   inputs:
     browserstackProduct: 'automate'
