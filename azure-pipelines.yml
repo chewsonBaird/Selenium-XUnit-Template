@@ -23,7 +23,6 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
-    BrowserStackBuildName: 'turtle'
 
 - task: VSBuild@1
   displayName: 'Build solution'
@@ -35,6 +34,7 @@ steps:
 - task: VSTest@2
   displayName: 'Run Tests'
   inputs:
+    testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\$(BuildConfiguration)\**\Investigation.dll
       !**\obj\**
