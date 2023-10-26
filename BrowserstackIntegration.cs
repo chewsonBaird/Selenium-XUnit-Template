@@ -1,4 +1,4 @@
-using Xunit;
+//using Xunit;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -173,7 +173,7 @@ namespace Investigation
                 //Summary
                 _general.SubmitWithoutStatements();
 
-                Assert.True(_digital.SubmitCompleted.Displayed);
+                Assert.IsTrue(_digital.SubmitCompleted.Displayed);
             }
             catch
             {
