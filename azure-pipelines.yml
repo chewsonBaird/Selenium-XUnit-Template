@@ -20,10 +20,20 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
+
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
     browserstackLocal: false
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Content: |
+      **\bin\$(BuildConfiguration)\**
+      **\$(BuildConfiguration)\*test*.dll
+      !**\obj\**
+    Target Folder: $(build.artifactstagingdirectory)
 
 - task: VSBuild@1
   displayName: 'Build solution'
@@ -40,7 +50,7 @@ steps:
       **\$(BuildConfiguration)\**\Investigation.dll
       !**\obj\**
       !**\*TestAdapter.dll
-      rerunFailedTests: true
+    rerunFailedTests: true
     rerunFailedThreshold: '50'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'

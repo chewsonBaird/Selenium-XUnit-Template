@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VWp7JkC1qBK+1Y2xal2NBokFSCsA2E8z+eUQN5+T1VdSk06nWCysQlrXqyye9MrdTECBwfHWQ9P+oWqSH4+KWA==",
+  "dgSpecHash": "S2OvUmJBlID03E5IBJZB+2hCWZWFgYpdqGsGmp8I5OMuJV6I3XPk+fHliMvnifvH6KIFQVXRIUjlHEx0vXnLIQ==",
   "success": true,
   "projectFilePath": "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj",
   "expectedPackageFiles": [
@@ -25,8 +25,6 @@
     "C:\\Users\\chewson\\.nuget\\packages\\monomod.core\\1.0.0-prerelease.2\\monomod.core.1.0.0-prerelease.2.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\monomod.ilhelpers\\1.0.0-prerelease.2\\monomod.ilhelpers.1.0.0-prerelease.2.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\monomod.utils\\25.0.0-prerelease.2\\monomod.utils.25.0.0-prerelease.2.nupkg.sha512",
-    "C:\\Users\\chewson\\.nuget\\packages\\mstest.testadapter\\3.1.1\\mstest.testadapter.3.1.1.nupkg.sha512",
-    "C:\\Users\\chewson\\.nuget\\packages\\mstest.testframework\\3.1.1\\mstest.testframework.3.1.1.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
