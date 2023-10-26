@@ -45,7 +45,7 @@ namespace Investigation
             //browserstackOptions.Add("sessionName", "BStack Build Name: " + "browserstack-pipe");
             //browserstackOptions.Add("userName", "jimwarchol_Z1kK3g");
             //browserstackOptions.Add("accessKey", "qBDq6Ngiuzemn8s5asWY");
-            //browserstackOptions.Add("seleniumVersion", "4.14.1");
+            //browserstackOptions.Add("seleniumVersion", "4.13.0");
             //browserstackOptions.Add("acceptInsecureCerts", true);
             //browserstackOptions.Add("local", false);
             ////browserstackOptions.Add("localIdentifier", localIdentifier);
