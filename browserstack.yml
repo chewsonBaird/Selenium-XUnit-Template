@@ -15,11 +15,11 @@
 projectName: BrowserStack Suite
 # Set `buildName` as the name of the job / testsuite being run
 #buildName: browserstack-pipe
-platforms:
-  - os: Windows
-    osVersion: 10
-    browserName: Chrome
-    browserVersion: latest-beta
+#platforms:
+#  - os: Windows
+#    osVersion: 10
+#    browserName: Chrome
+#    browserVersion: latest-beta
   #- os: Windows
   #  osVersion: 11
   #  browserName: Firefox
