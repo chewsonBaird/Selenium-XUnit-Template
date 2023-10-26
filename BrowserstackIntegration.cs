@@ -1,4 +1,4 @@
-//using Xunit;
+using Xunit;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -11,11 +11,9 @@ using TestObservability.Model.CBT;
 using OpenQA.Selenium.Remote;
 using TestObservability.Helper.CBT;
 using Microsoft.CodeAnalysis;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Investigation
 {
-    [TestClass]
     public class BrowserstackIntegration
     {
         private readonly IWebDriver _driver;
@@ -122,8 +120,8 @@ namespace Investigation
         //}
         // Test Case Id: 96368
         //Single account owner, individual account
-        //[Fact]
-        [TestMethod]
+        [Fact]
+        [Trait("Category", "Test")]
         public void CLIENT_IndividualAccount()
         {
             try
@@ -173,7 +171,7 @@ namespace Investigation
                 //Summary
                 _general.SubmitWithoutStatements();
 
-                Assert.IsTrue(_digital.SubmitCompleted.Displayed);
+                Assert.True(_digital.SubmitCompleted.Displayed);
             }
             catch
             {
