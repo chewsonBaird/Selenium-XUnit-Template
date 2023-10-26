@@ -173,14 +173,14 @@ namespace Investigation
 
                 Assert.True(_digital.SubmitCompleted.Displayed);
             }
-            catch
-            {
-                Assert.Fail();
-            }
-            //finally
+            //catch
             //{
-            //    _driver.Quit();
+            //    Assert.Fail();
             //}
+            finally
+            {
+                _driver.Quit();
+            }
         }
         //// Test Case Id: 125275
         ////Single account owner, IRA account
