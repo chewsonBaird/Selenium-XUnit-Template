@@ -55,7 +55,7 @@ steps:
     rerunFailedThreshold: '50'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    testFiltercriteria: FullyQualifiedName~UnitTest1
+#    testFiltercriteria: FullyQualifiedName~UnitTest1
 
 - task: BrowserStackResults@1
   inputs:
