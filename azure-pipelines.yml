@@ -33,7 +33,7 @@ steps:
       **\bin\$(BuildConfiguration)\**
       **\$(BuildConfiguration)\*test*.dll
       !**\obj\**
-    Target Folder: $(build.artifactstagingdirectory)
+    TargetFolder: $(build.artifactstagingdirectory)
 
 - task: VSBuild@1
   displayName: 'Build solution'
