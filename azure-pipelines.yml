@@ -23,6 +23,7 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
+    browserstackLocal: false
 
 - task: VSBuild@1
   displayName: 'Build solution'
