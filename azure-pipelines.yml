@@ -16,6 +16,8 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+  inputs:
+    solution: '$(solution)'
 
 - task: NuGetCommand@2
   inputs:
@@ -32,15 +34,6 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Content: |
-      **\bin\$(BuildConfiguration)\**
-      **\$(BuildConfiguration)\*test*.dll
-      !**\obj\**
-    TargetFolder: $(build.artifactstagingdirectory)
 
 - task: VSTest@2
   displayName: 'Run Tests'
