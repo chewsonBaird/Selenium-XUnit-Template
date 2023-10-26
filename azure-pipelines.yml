@@ -44,7 +44,6 @@ steps:
     rerunFailedThreshold: '50'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    testFiltercriteria: FullyQualifiedName~BrowserstackIntegration
 
 #- task: VSTest@3
 #  inputs:
