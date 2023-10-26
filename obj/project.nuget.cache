@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2dDvHW1pfXNLNRiUlNe0FwKntaSjHPBGg9Mg4txkq67iOsPDzAvAspj87eDa5V3W1NQDJz2zTuGp0k98i30Whw==",
+  "dgSpecHash": "S2OvUmJBlID03E5IBJZB+2hCWZWFgYpdqGsGmp8I5OMuJV6I3XPk+fHliMvnifvH6KIFQVXRIUjlHEx0vXnLIQ==",
   "success": true,
   "projectFilePath": "C:\\repositories\\Selenium-XUnit-Template\\Investigation.csproj",
   "expectedPackageFiles": [
@@ -45,7 +45,7 @@
     "C:\\Users\\chewson\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-    "C:\\Users\\chewson\\.nuget\\packages\\selenium.webdriver\\4.14.1\\selenium.webdriver.4.14.1.nupkg.sha512",
+    "C:\\Users\\chewson\\.nuget\\packages\\selenium.webdriver\\4.13.0\\selenium.webdriver.4.13.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\serilog\\2.0.0\\serilog.2.0.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\chewson\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",

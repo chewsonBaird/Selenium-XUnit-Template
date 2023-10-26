@@ -909,21 +909,17 @@
           }
         }
       },
-      "Selenium.WebDriver/4.14.1": {
+      "Selenium.WebDriver/4.13.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.Drawing.Common": "7.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/WebDriver.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/WebDriver.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/WebDriver.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/WebDriver.dll": {}
         },
         "build": {
           "buildTransitive/Selenium.WebDriver.targets": {}
@@ -3993,10 +3989,10 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "Selenium.WebDriver/4.14.1": {
-      "sha512": "9gmtnYWDyscnVPdDZ1dMI8SikKLcrsS+GNweZVKMWxcUsagHOdQnX1yAA22KeTWbRubwp5Vw/E6NF/6drzaTbA==",
+    "Selenium.WebDriver/4.13.0": {
+      "sha512": "I8IEwL6OeCd0FVmvHHkhDpuiCU7vDC5CZ/DirLFkschC8kSmYOYHpVKgtDiioE3tzFNFMQb0+YPWJFaYVsvEBQ==",
       "type": "package",
-      "path": "selenium.webdriver/4.14.1",
+      "path": "selenium.webdriver/4.13.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4004,11 +4000,10 @@
         "buildTransitive/Selenium.WebDriver.targets",
         "images/icon.png",
         "lib/netstandard2.0/WebDriver.dll",
-        "lib/netstandard2.0/WebDriver.xml",
         "manager/linux/selenium-manager",
         "manager/macos/selenium-manager",
         "manager/windows/selenium-manager.exe",
-        "selenium.webdriver.4.14.1.nupkg.sha512",
+        "selenium.webdriver.4.13.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -7407,7 +7402,7 @@
       "BrowserStack.TestAdapter >= 0.3.4",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "Microsoft.NET.Test.Sdk >= 17.7.2",
-      "Selenium.WebDriver >= 4.14.1",
+      "Selenium.WebDriver >= 4.13.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
       "xunit.runner.visualstudio >= 2.5.3"
@@ -7472,7 +7467,7 @@
           },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.14.1, )"
+            "version": "[4.13.0, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
