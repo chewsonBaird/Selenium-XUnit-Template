@@ -176,10 +176,10 @@ namespace Investigation
             {
                 Assert.Fail();
             }
-            finally
-            {
-                _driver.Quit();
-            }
+            //finally
+            //{
+            //    _driver.Quit();
+            //}
         }
         // Test Case Id: 125275
         //Single account owner, IRA account

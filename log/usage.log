@@ -8295,3 +8295,67 @@ C:\repositories\Selenium-XUnit-Template>echo "completed bat file"
 "completed bat file"
 
 2023-10-26 09:08:56.1422|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used
+2023-10-26 09:26:35.7948|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-26 09:26:36.0431|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-26 09:26:42.7167|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-26 09:26:42.8913|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-26 09:28:58.3839|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [2 m 12 s]
+  Error Message:
+   Assert.Fail() Failure
+  Stack Trace:
+     at Investigation.BrowserstackIntegration.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\BrowserstackIntegration.cs:line 177
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-26 09:28:58.3915|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used
+2023-10-26 09:29:43.9927|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-26 09:29:44.1733|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-26 09:29:48.8021|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-26 09:29:48.9866|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-26 09:31:52.9315|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Release\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [2 m]
+  Error Message:
+   Assert.Fail() Failure
+  Stack Trace:
+     at Investigation.BrowserstackIntegration.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\BrowserstackIntegration.cs:line 177
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-26 09:31:52.9406|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used

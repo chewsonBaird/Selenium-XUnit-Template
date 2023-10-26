@@ -4,8 +4,8 @@
 # Add your BrowserStack userName and acccessKey here or set BROWSERSTACK_USERNAME and
 # BROWSERSTACK_ACCESS_KEY as env variables
 
-#userName: jimwarchol_Z1kK3g
-#accessKey: qBDq6Ngiuzemn8s5asWY
+userName: jimwarchol_Z1kK3g
+accessKey: qBDq6Ngiuzemn8s5asWY
 
 # ======================
 # BrowserStack Reporting
@@ -36,15 +36,10 @@ projectName: BrowserStack Suite
   #  osVersion: Big Sur
   #  browserName: Safari
   #  browserVersion: 14.1
-#browserstackLocal: false
-userName: jimwarchol_Z1kK3g
-accessKey: qBDq6Ngiuzemn8s5asWY
 platforms:
   - os: Windows
     osVersion: 10
     browserName: Chrome
     browserVersion: latest-beta
-#buildName: BStack Build Name
-#sessionName: BStack Session Name
 seleniumVersion: 4.13.0
 browserstackLocal: false
