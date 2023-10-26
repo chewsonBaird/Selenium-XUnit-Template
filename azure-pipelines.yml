@@ -12,7 +12,7 @@ pool:
 variables:
   solution: '**/Investigation.sln'
   buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  buildConfiguration: 'Debug'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -54,7 +54,6 @@ steps:
     rerunFailedThreshold: '50'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    testFiltercriteria: FullyQualifiedName~BrowserstackIntegration
 
 #- task: VSTest@3
 #  inputs:
