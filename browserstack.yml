@@ -12,14 +12,14 @@
 # ======================
 # The following capabilities are used to set up reporting on BrowserStack:
 # Set 'projectName' to the name of your project. Example, Marketing Website
-#projectName: BrowserStack Suite
+projectName: BrowserStack Suite
 # Set `buildName` as the name of the job / testsuite being run
 #buildName: browserstack-pipe
-#platforms:
-  #- os: Windows
-    #osVersion: 10
-    #browserName: Chrome
-    #browserVersion: latest-beta
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: latest-beta
   #- os: Windows
   #  osVersion: 11
   #  browserName: Firefox
