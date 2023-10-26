@@ -12,9 +12,10 @@ using OpenQA.Selenium.Remote;
 using TestObservability.Helper.CBT;
 using Microsoft.CodeAnalysis;
 
+
 namespace Investigation
 {
-    public class UnitTest1
+    public class BrowserstackIntegration
     {
         private readonly IWebDriver _driver;
         private const int WAIT_FOR_ELEMENT_TIMEOUT = 25;
@@ -27,7 +28,7 @@ namespace Investigation
         private readonly General _general;
         private readonly TestAssertionLibrary _assertions;
 
-        public UnitTest1()
+        public BrowserstackIntegration()
         {
             ChromeOptions options = new ChromeOptions();
             //options.AddArguments("headless");
