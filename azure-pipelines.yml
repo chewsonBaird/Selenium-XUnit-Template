@@ -26,6 +26,13 @@ steps:
     BrowserStackServiceEndPoint: 'browserstack-connection'
     browserstackLocal: false
 
+- task: VSBuild@1
+  displayName: 'Build solution'
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
@@ -34,13 +41,6 @@ steps:
       **\$(BuildConfiguration)\*test*.dll
       !**\obj\**
     TargetFolder: $(build.artifactstagingdirectory)
-
-- task: VSBuild@1
-  displayName: 'Build solution'
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
   displayName: 'Run Tests'
