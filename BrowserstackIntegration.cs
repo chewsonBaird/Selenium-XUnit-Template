@@ -124,13 +124,13 @@ namespace Investigation
         //Single account owner, individual account
         //[Fact]
         [TestMethod]
-        public async void CLIENT_IndividualAccount()
+        public void CLIENT_IndividualAccount()
         {
             try
             {
                 _driver.Manage().Window.Maximize();
                 //_transitionTracker.UpdateHouseholdData(TEST_HOUSEHOLD_TRANSITION_TRACKER_ID, false);
-                var token = await _transitionTracker.APIHouseholdClear();
+                var token = _transitionTracker.APIHouseholdClear();
 
                 //_bairdOnLine.GoTo();
                 //_bairdOnLine.Login();
