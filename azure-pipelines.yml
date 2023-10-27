@@ -20,7 +20,7 @@ steps:
     BrowserStackServiceEndPoint: 'browserstack-connection'
     browserstackLocal: false
 
-- script: dotnet build **/Investigation.sln --configuration $(buildConfiguration)
+- script: dotnet build ./**/Investigation.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
