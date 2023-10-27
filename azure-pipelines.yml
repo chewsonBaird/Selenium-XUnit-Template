@@ -15,83 +15,18 @@ variables:
   buildConfiguration: 'Debug'
 
 steps:
-#- task: NuGetToolInstaller@1
-#  inputs:
-#    solution: '$(solution)'
-
-#- task: NuGetCommand@2
-#  inputs:
-#    restoreSolution: '$(solution)'
-
-- task: DotNetCoreCLI@2
-  displayName: Restore
-  inputs:
-    command: restore
-    projects: '**/Investigation.csproj'
-
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
     browserstackLocal: false
 
-#- task: VSBuild@1
-#  displayName: 'Build solution'
-#  inputs:
-#    solution: '$(solution)'
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
+- script: dotnet build **/Investigation.sln --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'build'
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-#- task: VSTest@2
-#  displayName: 'Run Tests'
-#  inputs:
-#    testSelector: 'testAssemblies'
-#    testAssemblyVer2: |
-#      **\$(BuildConfiguration)\**\Investigation.dll
-#      !**\obj\**
-#      !**\*TestAdapter.dll
-#    rerunFailedTests: true
-#    rerunFailedThreshold: '50'
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
-
-#- task: VSTest@3
-#  inputs:
-#    testSelector: 'testAssemblies'
-#    testAssemblyVer3: |
-#      **\$(BuildConfiguration)\**\*Investigation*.dll
-#      !**\*TestAdapter.dll
-#      !**\obj\**
-#    searchFolder: '$(System.DefaultWorkingDirectory)'
-#    rerunFailedTests: true
-#    rerunFailedThreshold: '50'
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
-#    testFiltercriteria: FullyQualifiedName~BrowserstackIntegration
-
-- task: DotNetCoreCLI@2
-  displayName: Publish
-  inputs:
-    command: publish
-    publishWebProjects: false
+    command: 'test'
     projects: '**/Investigation.csproj'
-    arguments: '--configuration Debug -o $(build.artifactstagingdirectory)/SeleniumTests'
-    zipAfterPublish: false
-    modifyOutputPath: false
-
-# publish all artifacts in the Artifact Stagign Directory
-# this will place the UI Test artifacts in Azure DevOps for future use in the deployment pipeline
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-  condition: succeededOrFailed()
 
 - task: BrowserStackResults@1
   inputs:
