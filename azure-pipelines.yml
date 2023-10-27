@@ -15,6 +15,14 @@ variables:
   buildConfiguration: 'Debug'
 
 steps:
+- task: NuGetToolInstaller@1
+  inputs:
+    solution: '$(solution)'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+    
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
