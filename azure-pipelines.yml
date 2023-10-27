@@ -22,7 +22,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-    
+
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
@@ -35,10 +35,32 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
+- task: VSTest@2
+  displayName: 'Run Tests'
   inputs:
-    command: 'test'
-    projects: '**/Investigation.csproj'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\$(BuildConfiguration)\**\Investigation.dll
+      !**\obj\**
+      !**\*TestAdapter.dll
+    rerunFailedTests: true
+    rerunFailedThreshold: '50'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+#- task: VSTest@3
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer3: |
+#      **\$(BuildConfiguration)\**\*Investigation*.dll
+#      !**\*TestAdapter.dll
+#      !**\obj\**
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#    rerunFailedTests: true
+#    rerunFailedThreshold: '50'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
+#    testFiltercriteria: FullyQualifiedName~BrowserstackIntegration
 
 - task: BrowserStackResults@1
   inputs:
