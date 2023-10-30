@@ -43,6 +43,7 @@ steps:
       **\$(BuildConfiguration)\**\Investigation.dll
       !**\obj\**
       !**\*TestAdapter.dll
+    searchFolder: '$(System.DefaultWorkingDirectory)'
     rerunFailedTests: true
     rerunFailedThreshold: '50'
     platform: '$(buildPlatform)'
