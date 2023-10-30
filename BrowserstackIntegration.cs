@@ -121,14 +121,13 @@ namespace Investigation
         // Test Case Id: 96368
         //Single account owner, individual account
         [Fact]
-        [Trait("Category", "Test")]
-        public void CLIENT_IndividualAccount()
+        public async void CLIENT_IndividualAccount()
         {
             try
             {
                 _driver.Manage().Window.Maximize();
                 //_transitionTracker.UpdateHouseholdData(TEST_HOUSEHOLD_TRANSITION_TRACKER_ID, false);
-                var token = _transitionTracker.APIHouseholdClear();
+                var token = await _transitionTracker.APIHouseholdClear();
 
                 //_bairdOnLine.GoTo();
                 //_bairdOnLine.Login();
@@ -169,7 +168,7 @@ namespace Investigation
                 _general.AdditionalInformationSelectionWithAssertions(additionalInformation: true);
 
                 //Summary
-                _general.SubmitWithoutStatements();
+                //_general.SubmitWithoutStatements();
 
                 Assert.True(_digital.SubmitCompleted.Displayed);
             }

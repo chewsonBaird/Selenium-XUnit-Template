@@ -10078,3 +10078,197 @@ C:\repositories\Selenium-XUnit-Template>echo "completed bat file"
 
 2023-10-26 11:50:43.0887|INFO|A.b|Cleaning up adapter
 2023-10-26 11:50:43.0887|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-27 14:54:57.2696|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-27 14:54:57.2696|INFO|A.b|Setting up adapter
+2023-10-27 14:54:57.2906|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)""
+2023-10-27 14:56:30.0335|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-27 14:56:30.0335|INFO|A.b|0 : 
+2023-10-27 14:54:59.3432|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-27 14:54:59.5168|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-27 14:56:29.5753|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [1 m 23 s]
+  Error Message:
+   BrowserStackException : Timed out after 25 seconds
+  Stack Trace:
+     at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at SeleniumPOC.PageObjects.DigitalOnboarding.WaitAndFindElement(By locator) in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 312
+   at SeleniumPOC.PageObjects.DigitalOnboarding.get_LetsGetStartedButton() in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 38
+   at SeleniumPOC.PageObjects.General.GetStartedAndClearCookies() in C:\repositories\Selenium-XUnit-Template\PageObjects\General.cs:line 91
+   at Investigation.BrowserstackIntegration.CLIENT_IndividualAccount(BrowserstackIntegration this)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-27 14:56:29.5821|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used
+
+[xUnit.net 00:01:23.44]     Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [FAIL]
+
+2023-10-27 14:56:30.0335|INFO|A.b|Cleaning up adapter
+2023-10-27 14:56:30.0335|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-27 15:04:20.3445|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-27 15:04:20.3445|INFO|A.b|Setting up adapter
+2023-10-27 15:04:20.3622|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)""
+2023-10-27 15:05:15.4683|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-27 15:05:15.4683|INFO|A.b|0 : 
+2023-10-27 15:04:22.2823|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-27 15:04:22.4566|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-27 15:05:15.1562|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [48 s]
+  Error Message:
+   BrowserStackException : stale element reference: stale element not found
+  (Session info: chrome=119.0.6045.9); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+  Stack Trace:
+     at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.get_Displayed()
+   at SeleniumPOC.PageObjects.TestAssertionLibrary.Test_95971() in C:\repositories\Selenium-XUnit-Template\PageObjects\TestAssertionLibrary.cs:line 38
+   at SeleniumPOC.PageObjects.General.EnterHouseholdDetails(String country, String address1, String address2, String city, String state, String postalCode, Boolean own, Boolean fileUpload, Boolean successfulUpload, String fileName, String communicationPreference) in C:\repositories\Selenium-XUnit-Template\PageObjects\General.cs:line 110
+   at Investigation.BrowserstackIntegration.CLIENT_IndividualAccount(BrowserstackIntegration this)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-27 15:05:15.1562|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used
+
+[xUnit.net 00:00:49.11]     Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [FAIL]
+
+2023-10-27 15:05:15.4683|INFO|A.b|Cleaning up adapter
+2023-10-27 15:05:15.4683|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-27 15:12:01.8118|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-27 15:12:01.8118|INFO|A.b|Setting up adapter
+2023-10-27 15:12:01.8313|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)""
+2023-10-27 15:12:43.0212|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-27 15:12:43.0212|INFO|A.b|0 : 
+2023-10-27 15:12:03.8702|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-27 15:12:04.1609|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-27 15:12:42.6723|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [34 s]
+  Error Message:
+   BrowserStackException : stale element reference: stale element not found
+  (Session info: chrome=119.0.6045.9); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+  Stack Trace:
+     at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.get_Displayed()
+   at SeleniumPOC.PageObjects.TestAssertionLibrary.Test_95971() in C:\repositories\Selenium-XUnit-Template\PageObjects\TestAssertionLibrary.cs:line 38
+   at SeleniumPOC.PageObjects.General.EnterHouseholdDetails(String country, String address1, String address2, String city, String state, String postalCode, Boolean own, Boolean fileUpload, Boolean successfulUpload, String fileName, String communicationPreference) in C:\repositories\Selenium-XUnit-Template\PageObjects\General.cs:line 110
+   at Investigation.BrowserstackIntegration.CLIENT_IndividualAccount(BrowserstackIntegration this)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-27 15:12:42.6723|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used
+
+[xUnit.net 00:00:34.92]     Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [FAIL]
+
+2023-10-27 15:12:43.0212|INFO|A.b|Cleaning up adapter
+2023-10-27 15:12:43.0212|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
+2023-10-27 15:15:15.9168|INFO|BStack.VisualStudio.TestAdapter.BStackTestXunitExecutor|XUnit test stated from test explorer
+2023-10-27 15:15:15.9274|INFO|A.b|Setting up adapter
+2023-10-27 15:15:15.9274|INFO|A.b|Invoking browserstack-sdk with args: --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"" --settings "C:\Users\chewson\AppData\Local\Temp\.browserstack\.runsettings" --filter ""(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)""
+2023-10-27 15:17:17.1450|INFO|A.b|Exec: dotnet browserstack-sdk --skip-build-browserstack "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll"
+2023-10-27 15:17:17.1450|INFO|A.b|0 : 
+2023-10-27 15:15:17.8575|INFO|browserstack_sdk.Program|Detected Selenium version 4.13.0
+2023-10-27 15:15:18.0347|INFO|browserstack_sdk.Program|Detected dotnet version 7.0.306
+2023-10-27 15:17:16.0129|INFO|browserstack_sdk.Program|
+C:\repositories\Selenium-XUnit-Template>echo "running bat file" 
+"running bat file"
+
+C:\repositories\Selenium-XUnit-Template>cd C:\repositories\Selenium-XUnit-Template 
+
+C:\repositories\Selenium-XUnit-Template>dotnet test "C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\Investigation.dll" --filter "(FullyQualifiedName=Investigation.BrowserstackIntegration.CLIENT_IndividualAccount)" --no-build  "--logger:trx;LogFileName=C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml" 
+The following arguments have been ignored : "--no-build"
+Microsoft (R) Test Execution Command Line Tool Version 17.6.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Failed to load extensions from file 'C:\repositories\Selenium-XUnit-Template\bin\Debug\net6.0\ZZStack.TestAdapter.dll'. Please use /diag for more information.
+  Failed Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [1 m 54 s]
+  Error Message:
+   OpenQA.Selenium.WebDriverTimeoutException : Timed out after 25 seconds
+---- OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/account-owners/1/name']"}
+  (Session info: chrome=119.0.6045.9); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+  Stack Trace:
+     at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at SeleniumPOC.PageObjects.DigitalOnboarding.WaitAndFindElement(By locator) in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 312
+   at SeleniumPOC.PageObjects.DigitalOnboarding.get_AccountOwnersEditPrimaryAccountOwnerButton() in C:\repositories\Selenium-XUnit-Template\PageObjects\DigitalOnboarding.cs:line 118
+   at Investigation.BrowserstackIntegration.CLIENT_IndividualAccount() in C:\repositories\Selenium-XUnit-Template\BrowserstackIntegration.cs:line 145
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+----- Inner Stack Trace -----
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+Results File: C:\Users\chewson\AppData\Local\Temp\.browserstack\results_dotnet\result_0\NUnit-Browserstack.xml
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - Investigation.dll (net6.0)
+
+C:\repositories\Selenium-XUnit-Template>echo "completed bat file" 
+"completed bat file"
+
+2023-10-27 15:17:16.0203|WARN|browserstack_sdk.utils|Unable to show build URL, as build capability is not used
+
+[xUnit.net 00:01:54.68]     Investigation.BrowserstackIntegration.CLIENT_IndividualAccount [FAIL]
+
+2023-10-27 15:17:17.1450|INFO|A.b|Cleaning up adapter
+2023-10-27 15:17:17.1450|INFO|A.b|Getting results from: C:\Users\chewson\AppData\Local\Temp\.browserstack
